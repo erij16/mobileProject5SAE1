@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F3F4F6">
+
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Retour"
+        android:backgroundTint="#6200EE"
+        android:textColor="#FFFFFF"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/titre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ajouter Produits au Stock"
+        android:textSize="24sp"
+        android:textColor="#3E4A59"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="sans-serif-medium"
+        android:paddingBottom="24dp"
+        android:textStyle="bold" />
+
+    <!-- Champs de saisie pour le produit -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <EditText
+            android:id="@+id/tf_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Code du produit"
+            android:inputType="text"
+            android:padding="12dp"
+            android:background="@drawable/edittext_background"
+            android:layout_marginBottom="12dp"/>
+
+        <EditText
+            android:id="@+id/tf_nom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nom du produit"
+            android:inputType="text"
+            android:padding="12dp"
+            android:background="@drawable/edittext_background"
+            android:layout_marginBottom="12dp"/>
+
+        <EditText
+            android:id="@+id/tf_quantite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Quantité"
+            android:inputType="number"
+            android:padding="12dp"
+            android:background="@drawable/edittext_background"
+            android:layout_marginBottom="12dp"/>
+
+        <EditText
+            android:id="@+id/tf_prix_unitaire"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Prix unitaire"
+            android:inputType="numberDecimal"
+            android:padding="12dp"
+            android:background="@drawable/edittext_background"
+            android:layout_marginBottom="12dp"/>
+
+        <EditText
+            android:id="@+id/tf_seuil_min"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Seuil minimum"
+            android:inputType="number"
+            android:padding="12dp"
+            android:background="@drawable/edittext_background"
+            android:layout_marginBottom="12dp"/>
+    </LinearLayout>
+
+    <!-- Bouton pour sélectionner une image -->
+    <Button
+        android:id="@+id/btn_select_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sélectionner une image"
+        android:backgroundTint="#6200EE"
+        android:textColor="#FFFFFF"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- ImageView pour afficher l'image sélectionnée -->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@android:drawable/ic_menu_camera"
+        android:layout_gravity="center"/>
+
+    <!-- Boutons pour ajouter, afficher et supprimer -->
+    <Button
+        android:id="@+id/btn_ajout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ajouter"
+        android:backgroundTint="#6200EE"
+        android:textColor="#FFFFFF"
+        android:padding="12dp"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/btn_affichage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Afficher"
+        android:backgroundTint="#6200EE"
+        android:textColor="#FFFFFF"
+        android:padding="12dp"
+        android:layout_marginTop="16dp" />
+
+
+
+</LinearLayout>

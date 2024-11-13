@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="purple_500">#A500B5</color> <!-- Remplace cette valeur par la couleur que tu veux -->
+    <color name="scrollbar_thumb">#FF6200EE</color>  <!-- Couleur de la barre -->
+    <color name="scrollbar_track">#FFBB86FC</color>  <!-- Couleur de l'arrière-plan de la barre -->
+</resources>

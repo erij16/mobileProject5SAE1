@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ProduitsPrimairesF</string>
+    <string-array name="price_range">
+        <item>0</item>
+        <item>50</item>
+        <item>100</item>
+        <item>150</item>
+        <item>200</item>
+        <item>250</item>
+    </string-array>
+
+</resources>

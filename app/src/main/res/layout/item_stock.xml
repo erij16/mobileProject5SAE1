@@ -1,0 +1,142 @@
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="8dp"
+    android:layout_margin="12dp"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center_horizontal">
+
+        <!-- Product Image -->
+        <ImageView
+            android:id="@+id/img_product"
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="12dp"
+            android:contentDescription="Image du produit"
+            android:src="@drawable/default_image"
+            android:scaleType="centerCrop"
+            android:background="@drawable/rounded_image_border" />
+
+        <!-- Product Code -->
+        <TextView
+            android:id="@+id/tv_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Code du produit :"
+            android:textSize="16sp"
+            android:textColor="#333333"
+            android:layout_marginBottom="4dp"
+            android:textStyle="bold" />
+
+        <!-- Product Name -->
+        <TextView
+            android:id="@+id/tv_nom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nom du produit :"
+            android:textSize="18sp"
+            android:textColor="#6200EE"
+            android:layout_marginBottom="8dp"
+            android:textStyle="bold" />
+
+        <!-- Quantity -->
+        <TextView
+            android:id="@+id/tv_quantite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quantité :"
+            android:textSize="16sp"
+            android:textColor="#3E4A59"
+            android:layout_marginBottom="4dp" />
+
+        <!-- Unit Price -->
+        <TextView
+            android:id="@+id/tv_prix_u"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Prix unitaire :"
+            android:textSize="16sp"
+            android:textColor="#3E4A59"
+            android:layout_marginBottom="4dp" />
+
+        <!-- Minimum Threshold -->
+        <TextView
+            android:id="@+id/tv_seuil_min"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Seuil minimum :"
+            android:textSize="16sp"
+            android:textColor="#3E4A59"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Edit/Delete Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="8dp">
+
+            <Button
+                android:id="@+id/btn_delete"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Supprimer"
+                android:textSize="14sp"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="@color/design_default_color_error"
+                android:layout_marginEnd="8dp"
+                android:padding="8dp"
+                android:background="@drawable/rounded_button_background" />
+
+            <Button
+                android:id="@+id/btn_edit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Modifier"
+                android:textSize="14sp"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#6200EE"
+                android:padding="8dp"
+                android:background="@drawable/rounded_button_background" />
+        </LinearLayout>
+
+        <!-- QR Code Button and Image -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="16dp">
+
+            <Button
+                android:id="@+id/btn_generate_qr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Générer QR Code"
+                android:textSize="14sp"
+                android:padding="8dp"
+                android:layout_marginBottom="8dp" />
+
+            <ImageView
+                android:id="@+id/img_qr_code"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:visibility="gone"
+                android:layout_gravity="center" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

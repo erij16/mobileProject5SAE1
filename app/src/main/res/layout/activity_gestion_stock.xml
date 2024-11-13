@@ -1,0 +1,38 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gestion de stock"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#3E4A59"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="24dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_ajouter_produits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ajouter produits"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#6200EE"
+        android:textColor="#FFFFFF"
+        style="@style/Widget.MaterialComponents.Button" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_afficher_stock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Afficher stock"
+        android:backgroundTint="#6200EE"
+        android:textColor="#FFFFFF"
+        style="@style/Widget.MaterialComponents.Button" />
+</LinearLayout>

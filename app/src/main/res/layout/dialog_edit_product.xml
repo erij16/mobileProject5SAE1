@@ -1,0 +1,119 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:gravity="center">
+
+    <!-- Product Image -->
+    <ImageView
+        android:id="@+id/img_product_edit"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="Image du produit"
+        android:src="@drawable/default_image"
+        android:scaleType="centerCrop"
+        android:background="@drawable/rounded_image_border" />
+
+    <!-- Product Code -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Code du produit"
+        android:layout_marginBottom="12dp"
+        android:textAppearance="@style/TextAppearance.HintExtraLarge">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:background="@android:color/transparent"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Product Name -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nom du produit"
+        android:layout_marginBottom="12dp"
+        android:textAppearance="@style/TextAppearance.HintExtraLarge">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_nom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:background="@android:color/transparent"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Quantity -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Quantité"
+        android:layout_marginBottom="12dp"
+        android:textAppearance="@style/TextAppearance.HintExtraLarge">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_quantite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:background="@android:color/transparent"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Unit Price -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Prix unitaire (€)"
+        android:layout_marginBottom="12dp"
+        android:textAppearance="@style/TextAppearance.HintExtraLarge">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_prix_u"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:background="@android:color/transparent"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Minimum Threshold -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Seuil minimum"
+        android:layout_marginBottom="16dp"
+        android:textAppearance="@style/TextAppearance.HintExtraLarge">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_seuil_min"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:background="@android:color/transparent"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+</LinearLayout>
