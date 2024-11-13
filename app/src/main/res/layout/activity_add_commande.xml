@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp">
+
+    <!-- Champ pour le produit -->
+    <EditText
+        android:id="@+id/editTextProduit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Produit"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:inputType="text" />
+
+    <!-- Champ pour la quantité -->
+    <EditText
+        android:id="@+id/editTextQuantite"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Quantité"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@id/editTextProduit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Champ pour le prix -->
+    <EditText
+        android:id="@+id/editTextPrix"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Prix"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@id/editTextQuantite"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Bouton pour ajouter la commande -->
+    <Button
+        android:id="@+id/buttonAddCommande"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ajouter"
+        app:layout_constraintTop_toBottomOf="@id/editTextPrix"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

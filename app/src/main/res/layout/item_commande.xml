@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    android:gravity="center_vertical">
+
+    <!-- TextView pour le produit -->
+    <TextView
+        android:id="@+id/textViewProduit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Produit"
+        android:textSize="16sp" />
+
+    <!-- TextView pour la quantité -->
+    <TextView
+        android:id="@+id/textViewQuantite"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Quantité"
+        android:textSize="16sp" />
+
+    <!-- TextView pour le prix -->
+    <TextView
+        android:id="@+id/textViewPrix"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Prix"
+        android:textSize="16sp" />
+
+    <!-- ImageView pour le bouton de suppression -->
+    <ImageView
+        android:id="@+id/deleteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_menu_delete"
+        android:contentDescription="Supprimer"
+        android:layout_marginLeft="10dp"
+        android:layout_gravity="center_vertical" />
+
+    <ImageView
+        android:id="@+id/editButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_edit"
+        android:contentDescription="Edit Commande" />
+</LinearLayout>
