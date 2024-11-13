@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Title for the screen -->
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update Livraison"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Champ pour l'adresse de départ -->
+    <EditText
+        android:id="@+id/editTextAdresseDepart"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:hint="Adresse de départ"
+        app:layout_constraintTop_toBottomOf="@id/textViewTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:inputType="textPostalAddress"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Champ pour l'adresse de destination -->
+    <EditText
+        android:id="@+id/editTextAdresseDestination"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:hint="Adresse de destination"
+        app:layout_constraintTop_toBottomOf="@id/editTextAdresseDepart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:inputType="textPostalAddress" />
+
+    <!-- Champ pour le statut -->
+    <EditText
+        android:id="@+id/editTextStatut"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:hint="Statut"
+        app:layout_constraintTop_toBottomOf="@id/editTextAdresseDestination"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:inputType="text" />
+
+    <!-- Champ pour la date de livraison -->
+    <EditText
+        android:id="@+id/editTextDateLivraison"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:hint="Date de livraison"
+        app:layout_constraintTop_toBottomOf="@id/editTextStatut"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:inputType="date" />
+
+    <!-- Bouton pour enregistrer la livraison -->
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:backgroundTint="@color/design_default_color_primary"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/editTextDateLivraison"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

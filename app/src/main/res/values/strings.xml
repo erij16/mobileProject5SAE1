@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Livraison</string>
+    <string-array name="status_options">
+        <item>All</item>
+        <item>Pending</item>
+        <item>Delivered</item>
+        <item>In Progress</item>
+    </string-array>
+</resources>
