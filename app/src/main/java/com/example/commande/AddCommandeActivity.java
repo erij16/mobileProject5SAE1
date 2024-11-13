@@ -9,11 +9,6 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.commande.database.DatabaseHelper;
 import com.example.commande.model.commande;
-import com.example.commande.api.RetrofitClient;
-import com.example.commande.api.CommandeApi;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 public class AddCommandeActivity extends AppCompatActivity {
 
@@ -63,9 +58,10 @@ public class AddCommandeActivity extends AppCompatActivity {
                     // Envoi de la commande à l'API Node.js
                     envoyerCommandeAuServeur(commande);
 
-                    // Retourner à ListCommandesActivity après l'ajout
-                    Intent intent = new Intent(AddCommandeActivity.this, ListCommandesActivity.class);
-                    startActivity(intent);
+                    // Afficher un message dans la liste des commandes
+                    Intent listIntent = new Intent(AddCommandeActivity.this, ListCommandesActivity.class);
+                    listIntent.putExtra("message", "Commande ajoutée avec succès !");
+                    startActivity(listIntent);
                     finish();  // Fermer l'activité actuelle
                 } else {
                     Toast.makeText(AddCommandeActivity.this, "Erreur lors de l'ajout de la commande", Toast.LENGTH_SHORT).show();
@@ -75,24 +71,6 @@ public class AddCommandeActivity extends AppCompatActivity {
     }
 
     private void envoyerCommandeAuServeur(commande commande) {
-        CommandeApi api = RetrofitClient.getInstance().create(CommandeApi.class);
-
-        Call<Void> call = api.addCommande(commande);
-
-        call.enqueue(new Callback<Void>() {
-            @Override
-            public void onResponse(Call<Void> call, Response<Void> response) {
-                if (response.isSuccessful()) {
-                    Toast.makeText(AddCommandeActivity.this, "Commande envoyée au serveur", Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(AddCommandeActivity.this, "Erreur lors de l'envoi de la commande", Toast.LENGTH_SHORT).show();
-                }
-            }
-
-            @Override
-            public void onFailure(Call<Void> call, Throwable t) {
-                Toast.makeText(AddCommandeActivity.this, "Erreur de connexion au serveur", Toast.LENGTH_SHORT).show();
-            }
-        });
+        // Logique pour envoyer la commande au serveur via Retrofit
     }
 }

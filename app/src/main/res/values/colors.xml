@@ -2,4 +2,11 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="colorAccent">#FF4081</color> <!-- Exemple de couleur rose -->
+    <color name="colorGreen">#4CAF50</color> <!-- Vert pour l'ajout -->
+    <color name="colorOrange">#FFA500</color> <!-- Orange pour la modification -->
+    <color name="colorRed">#FF0000</color> <!-- Rouge pour la suppression -->
+    <color name="colorTransparent">#00000000</color> <!-- Transparent pour le fond -->
+
 </resources>

@@ -1,52 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:padding="10dp"
-    android:gravity="center_vertical">
+    android:gravity="center_vertical"
+    android:background="?android:attr/selectableItemBackground"
+    android:layout_marginBottom="8dp">
 
     <!-- TextView pour le produit -->
-    <TextView
-        android:id="@+id/textViewProduit"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="Produit"
-        android:textSize="16sp" />
+<TextView
+android:id="@+id/textViewProduit"
+android:layout_width="0dp"
+android:layout_height="wrap_content"
+android:layout_weight="1"
+android:text="Produit"
+android:textSize="16sp"
+android:paddingEnd="8dp"
+android:textColor="@android:color/black" />
 
     <!-- TextView pour la quantité -->
-    <TextView
-        android:id="@+id/textViewQuantite"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="Quantité"
-        android:textSize="16sp" />
+<TextView
+android:id="@+id/textViewQuantite"
+android:layout_width="0dp"
+android:layout_height="wrap_content"
+android:layout_weight="1"
+android:text="Quantité"
+android:textSize="16sp"
+android:paddingEnd="8dp"
+android:textColor="@android:color/black" />
 
     <!-- TextView pour le prix -->
-    <TextView
-        android:id="@+id/textViewPrix"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="Prix"
-        android:textSize="16sp" />
+<TextView
+android:id="@+id/textViewPrix"
+android:layout_width="0dp"
+android:layout_height="wrap_content"
+android:layout_weight="1"
+android:text="Prix"
+android:textSize="16sp"
+android:textColor="@android:color/black" />
 
     <!-- ImageView pour le bouton de suppression -->
-    <ImageView
-        android:id="@+id/deleteButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@android:drawable/ic_menu_delete"
-        android:contentDescription="Supprimer"
-        android:layout_marginLeft="10dp"
-        android:layout_gravity="center_vertical" />
+<ImageView
+android:id="@+id/deleteButton"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:src="@android:drawable/ic_menu_delete"
+android:contentDescription="Supprimer"
+android:layout_marginLeft="10dp"
+android:layout_gravity="center_vertical"
+android:layout_marginStart="10dp"
+android:layout_marginEnd="5dp"
+app:tint="@color/colorRed" />  <!-- Utiliser app:tint ici -->
 
-    <ImageView
-        android:id="@+id/editButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_edit"
-        android:contentDescription="Edit Commande" />
-</LinearLayout>
+    <!-- ImageView pour le bouton de modification -->
+<ImageView
+android:id="@+id/editButton"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:src="@drawable/ic_edit"
+android:contentDescription="Edit Commande"
+android:layout_marginStart="10dp"
+app:tint="@color/colorOrange" />  <!-- Utiliser app:tint ici -->
+
+    </LinearLayout>

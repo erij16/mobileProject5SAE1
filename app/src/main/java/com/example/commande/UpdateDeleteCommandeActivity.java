@@ -1,5 +1,6 @@
 package com.example.commande;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -67,7 +68,12 @@ public class UpdateDeleteCommandeActivity extends AppCompatActivity {
 
                     if (rowsUpdated > 0) {
                         Toast.makeText(UpdateDeleteCommandeActivity.this, "Commande mise à jour avec succès", Toast.LENGTH_SHORT).show();
-                        finish();
+
+                        // Envoyer un message à ListCommandesActivity pour afficher la notification de mise à jour
+                        Intent resultIntent = new Intent(UpdateDeleteCommandeActivity.this, ListCommandesActivity.class);
+                        resultIntent.putExtra("message", "Commande modifiée avec succès");
+                        resultIntent.putExtra("color", R.color.colorOrange);  // Couleur orange pour la mise à jour
+                        startActivity(resultIntent);  // Lancer ListCommandesActivity pour afficher la notification
                     } else {
                         Toast.makeText(UpdateDeleteCommandeActivity.this, "Erreur lors de la mise à jour", Toast.LENGTH_SHORT).show();
                     }
@@ -85,7 +91,12 @@ public class UpdateDeleteCommandeActivity extends AppCompatActivity {
 
                 if (rowsDeleted > 0) {
                     Toast.makeText(UpdateDeleteCommandeActivity.this, "Commande supprimée avec succès", Toast.LENGTH_SHORT).show();
-                    finish();
+
+                    // Envoyer un message à ListCommandesActivity pour afficher la notification de suppression
+                    Intent resultIntent = new Intent(UpdateDeleteCommandeActivity.this, ListCommandesActivity.class);
+                    resultIntent.putExtra("message", "Commande supprimée avec succès");
+                    resultIntent.putExtra("color", R.color.colorRed);  // Couleur rouge pour la suppression
+                    startActivity(resultIntent);  // Lancer ListCommandesActivity pour afficher la notification
                 } else {
                     Toast.makeText(UpdateDeleteCommandeActivity.this, "Erreur lors de la suppression", Toast.LENGTH_SHORT).show();
                 }
