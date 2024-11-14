@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Reclamation</string>
+    <string name="ic_complaint">Icône de réclamation</string>
+     <string-array name="TypeReclamation">
+         <item>Problème technique</item>
+         <item>Service client</item>
+         <item>Facturation</item>
+         <item>Autre</item>
+    </string-array>
+    <string name="view_reclamations">View Reclamations</string>
+</resources>
